@@ -5,12 +5,11 @@ from pathlib import Path
 
 import requests
 import browser_cookie3
-import urllib.parse as url_parse
 from fake_useragent import UserAgent
 
-import filename
+import filename_fixer
 import config
-
+import urllib.parse as url_parse
 
 def get_code():
 
@@ -87,7 +86,7 @@ for id in filtered_beatmaps:
     
     print(f"------------------------------------\nDownloading {counter}. {title}({artist}) ....")
 
-    file_name = filename.remove_invalid_chars(f"{title}({artist}).osz")
+    file_name = filename_fixer.remove_invalid_chars(f"{title}({artist}).osz")
 
     if not os.path.exists('beatmaps'):
         os.makedirs('beatmaps')
