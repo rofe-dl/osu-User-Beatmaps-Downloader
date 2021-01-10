@@ -67,8 +67,7 @@ download_video = int(input("Enter 1 if you want to download maps with video, 0 i
 response = requests.get(f"https://osu.ppy.sh/api/v2/users/{user_id}/beatmapsets/most_played?&limit={number_of_maps}", headers=access_token)
 json = response.json()
 
-filtered_beatmaps = dict()
-
+filtered_beatmaps = dict() #to filter out same beatmaps that only differ by difficulty level
 for beatmap in json:
     beatmapset_id = beatmap['beatmapset']['id']
     beatmapset_content = beatmap['beatmapset']
@@ -88,9 +87,9 @@ for id in filtered_beatmaps:
 
     file_name = filename_fixer.remove_invalid_chars(f"{title}({artist}).osz")
 
-    if not os.path.exists('beatmaps'):
+    if not os.path.exists('beatmaps'): #if folder already exists
         os.makedirs('beatmaps')
-    elif os.path.isfile(Path('beatmaps', file_name)):
+    elif os.path.isfile(Path('beatmaps', file_name)): #if file already exists, Path module used so linux or windows won't matter
         print(f"Skipping {file_name}. File already exists.\n------------------------------------")
         counter += 1
         continue
