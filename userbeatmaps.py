@@ -59,7 +59,7 @@ def get_access_token():
 
 access_token = get_access_token()
 
-print("--------------------------------osu! UserBeatmaps--------------------------------")
+print("--------------------------------osu! User Beatmaps Downloader--------------------------------")
 user_id = input("Enter your user ID here (can be found in the url of your osu! profile): ")
 number_of_maps = int(input("Enter number of most played maps you want to download (duplicates included): "))
 download_video = int(input("Enter 1 if you want to download maps with video, 0 if no video for smaller file sizes: "))
@@ -114,9 +114,7 @@ print('\n--------------------------------All downloads SUCCESFULLY completed----
 
 #duplicated calculation
 
-#download maps in certain directory
-
 #make sure preferred browser logged in, or else html files will be downloaded
 
 #script display may lag behind, press enter to refresh
-#file already exists
+#to use the script again
