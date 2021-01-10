@@ -24,7 +24,7 @@ def get_code():
 
     browser.open_new_tab(url)
 
-    entered_url = input("After clicking authorize in your browser, paste the url here (e.g example.com/?code=alskdndoan..) : ")
+    entered_url = input("After clicking authorize in your browser, paste the url here (e.g example.com/?code=def523...) : ")
 
     parsed = url_parse.urlparse(entered_url)
     code = url_parse.parse_qs(parsed.query)['code'][0]
@@ -107,4 +107,4 @@ for id in filtered_beatmaps:
     counter += 1
     time.sleep(5) #to prevent excessive requests per minute
 
-print('\n--------------------------------All downloads SUCCESFULLY completed--------------------------------')
+print('\n--------------------------------All downloads SUCCESSFULLY completed--------------------------------')
