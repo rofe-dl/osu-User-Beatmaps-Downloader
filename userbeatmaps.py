@@ -108,13 +108,3 @@ for id in filtered_beatmaps:
     time.sleep(5) #to prevent excessive requests per minute
 
 print('\n--------------------------------All downloads SUCCESFULLY completed--------------------------------')
-#script won't work on linux, browser_cookie3 not compatible with linux desktop environments
-#if desperate to make it work, launch chrome browser from the terminal with the --password-store=basic flag
-#will have to login again
-
-#duplicated calculation
-
-#make sure preferred browser logged in, or else html files will be downloaded
-
-#script display may lag behind, press enter to refresh
-#to use the script again
