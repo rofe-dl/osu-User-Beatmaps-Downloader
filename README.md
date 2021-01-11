@@ -4,7 +4,7 @@ A little python script that can download any users' most played beatmaps using v
 
 ### Requirements
 ___
-* Python 3+
+* Any Python from version 3.6.x to 3.8.x. Other versions are incompatible due to syntax or library issues.
 
 ### Instructions
 ___
