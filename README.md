@@ -21,9 +21,11 @@ ___
     ```
 ### Notes
 ___
-* If on a Linux system, use python3 and pip3 instead of just python and pip in the commands above. To use the script on linux, you need to open Chrome through the terminal with the flag --password-store=basic flag and login again to osu!
-
-    >google-chrome --password-store=basic
+* If on a Linux system :
+    1. Use python3 and pip3 instead of just python and pip in the commands above
+    1. You need to use Firefox, as browser_cookie3 is not compatible with Chrome on Linux, so change browser to 'firefox' in config.py
+    1. Second command will instead be
+        >source env/bin/activate
 * Please make sure the browser specified in config.py is logged into osu! as the cookie from that browser is extracted in the script. If not logged in, html files will be downloaded instead.
 * Script may lag behind in displaying progress if command prompt is unfocued, press Enter to refresh it.
 * Same beatmaps in your most played will only be downloaded once. So for example, if you want to download the top 5, and 2 of those belong to the same beatmapset, you will be downloading 4 beatmaps.
